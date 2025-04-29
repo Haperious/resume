@@ -1,0 +1,105 @@
+/* Global form elements inherit base font style and size */
+input,
+textarea,
+select,
+button,
+label,
+.form-select,
+.btn,
+.btn-primary {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Input, textarea, select, form-select base styling */
+input,
+textarea,
+select,
+.form-select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Base button style */
+button,
+.btn,
+.btn-primary {
+    font-weight: 500;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Primary button override */
+.btn-primary {
+    background-color: #300022;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    opacity: 0.95;
+    background-color: #495057;
+    
+}
+
+/* Label spacing */
+label {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    input,
+    textarea,
+    select,
+    button,
+    label,
+    .form-select,
+    .btn,
+    .btn-primary {
+        font-size: 0.65rem;
+    }
+
+    button,
+    .btn,
+    .btn-primary {
+        padding: 7px 12px;
+    }
+
+    .form-select {
+        padding: 6px 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    input,
+    textarea,
+    select,
+    button,
+    label,
+    .form-select,
+    .btn,
+    .btn-primary {
+        font-size: 0.6rem;
+    }
+
+    button,
+    .btn,
+    .btn-primary {
+        padding: 6px 10px;
+    }
+
+    .form-select {
+        padding: 5px 8px;
+    }
+}

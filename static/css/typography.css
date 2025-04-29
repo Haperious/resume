@@ -1,0 +1,48 @@
+
+h1, h2 {
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #ff85a2;
+}
+ h4 {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.home-name{
+    font-size: 2vh;
+    font-weight: 500;
+}
+.email {
+    font-size: 2vh;
+    font-weight: 500;
+  }
+  .phone {
+    font-size: 2vh;
+    font-weight: 500;
+    }
+
+@media (max-width: 768px) {
+    .home-name{
+        font-size: 1.5vh;
+        font-weight: 500;
+    }
+    .email {
+      font-size: 1.2vh;
+    }
+    .phone {
+        font-size: 1.2vh;
+      }
+  }
+  

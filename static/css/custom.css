@@ -1,0 +1,259 @@
+.color-amount {
+    color: #005eb8;
+    font-weight: bold;
+  }
+  
+  .bg-dark-blue {
+    background-color: #550b4f;
+  }
+  
+  .bg-grey {
+    background-color: #eee;
+  }
+  .bg-light-sky {
+    background-color: #c5d5f9;
+  }
+  .color-primary {
+    color: #550b4f;
+  }
+  
+  .color-warning {
+    color: yellow;
+  }
+  
+  .color-success {
+    color: #00a34e;
+  }
+  
+  .tab-title {
+    font-size: 15px; /* Default for large screens */
+  }
+  
+  @media (max-width: 768px) {
+    .tab-title {
+      font-size: 12px; /* Smaller for mobile or tablets */
+    }
+  }
+  
+  .email-size {
+    font-size: 15px; /* Default for large screens */
+  }
+  
+  @media (max-width: 768px) {
+    .email-size {
+      font-size: 12px; /* Smaller for mobile or tablets */
+    }
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Button */
+  .dropbtn {
+    color: #005eb8;
+    font-size: 11px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  /* Dropdown Content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    font-size: 12px;
+    padding: 5px 5px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Hover effect on links */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown menu on button hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Optional: Change button style on hover */
+  /* .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  } */
+  
+  .show {
+    display: block;
+  }
+  
+  /* Row container */
+  .row-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px; /* Optional: adjust spacing */
+  }
+  
+  /* Columns inside */
+  .col-mobile {
+    flex: 1;
+    padding: 10px;
+    min-width: 300px; /* Prevent columns from being too narrow */
+  }
+  
+  /* Responsive: On small screens, make columns stack vertically */
+  @media (max-width: 768px) {
+    .row-mobile {
+      flex-direction: column;
+    }
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .test-container {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+    height: 100vh;
+  }
+  
+  .center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+  
+  #convai-widget {
+    transform: scale(1); /* Makes widget visually larger */
+    transform-origin: top center;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .sorry-text {
+    font-weight: 500;
+    font-size: 50px;
+    color: #c3c1c1;
+  }
+  
+  .back-button {
+    font-size: larger;
+  }
+  
+  .amdeus-logo {
+    width: 10%;
+    height: auto;
+  }
+  @media (max-width: 1200px) {
+    #convai-widget {
+      transform: scale(1); /* Even bigger on small screens */
+    }
+  
+    .amdeus-logo {
+      width: 40%;
+      height: auto;
+    }
+  
+    .sorry-text {
+      font-weight: 500;
+      font-size: 2.6vh;
+    }
+    .center-absolute {
+      font-size: 1.5vh;
+      text-align: center;
+      width: 50%;
+    }
+  
+    .back-button {
+      font-size: 2vh;
+    }
+  }
+  
+ /*----------------------- Custom navbar ------------------*/
+ 
+
+/* Base styles */
+.custom-navbar {
+  display: flex;
+  align-items: center;
+  background-color: #5a2355;
+  color: white;
+  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 1.5rem;
+}
+
+.toggle-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+.custom-navbar a:hover {
+  background-color: #3a0135;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .toggle-button {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-top: 5px;
+    margin-left: 10px
+    
+  }
+
+}
+
+ /*----------------------- Custom navbar ------------------*/

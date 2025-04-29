@@ -1,0 +1,25 @@
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+    max-width: 100%;
+}
+
+.content-wrapper {
+    padding-top: 20px;
+}
+
+
+/* Adjust content when sidebar is collapsed */
+.sidebar.collapsed + .content {
+    margin-left: 70px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+}
