@@ -1,0 +1,5 @@
+staticSites:
+  - name: static-site
+    branch: main
+    buildCommand: ""
+    publishDir: .
