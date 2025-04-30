@@ -9,6 +9,9 @@ from flask import (
     flash,
     Blueprint,
 )
+from .certificates import get_certificates_list
+from .projects import get_projects_list
+from .techstack import get_techstack_list
 
 resume_bp = Blueprint(
     "resume", __name__, template_folder="../templates/routes"
@@ -25,12 +28,15 @@ def get_academic():
 
 @resume_bp.route("/certifications")
 def get_certifications():
-    return render_template("certifications.html")
+    certificates=get_certificates_list()
+    return render_template("certifications.html",certificates=certificates)
 
 @resume_bp.route("/projects")
 def get_projects():
-    return render_template("projects.html")
+    projects=get_projects_list()
+    return render_template("projects.html",projects=projects)
 
 @resume_bp.route("/techstack")
 def get_techstack():
-    return render_template("techstack.html")
+    techstack=get_techstack_list()
+    return render_template("techstack.html",techstack=techstack)

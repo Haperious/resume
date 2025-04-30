@@ -2,9 +2,69 @@
 <div class="container">
 <div class="row">
     <div class="col">
-      Certificates
+      Certificates & Seminars
         
     </div>
 </div>
+{% if certificates%}
+<div class="grid-container">
+  {% for certificate in certificates%}
+  <div class="row">
+    <div class="col w-100">
+      <div class="card-grid mb-4 shadow-sm">
+
+        {% if certificate.link%}
+       
+          <embed src="{{certificate.link}}"  width="100%" heigh="100%"></embed>
+       
+        <div class="card-body">
+          <a href="{{certificate.link}}" target="_blank">
+          <h5 class="card-title color-primary my-2 bold">
+            {{certificate.name}}
+          </h5>
+        </a>
+          <div class="row my-2" style="text-align: left;">
+            <div class="col">
+              Hoted By:
+              <span class="color-success" style="font-size: 14px;"
+                >{{certificate.by}}</span
+              >
+            </div>
+          </div>
+
+          <div class="row my-2" style="text-align: left;">
+            <div class="col bold">{{certificate.type}}</div>
+          </div>
+        </div>
+        {%else%}
+        
+        <div class="card-body">
+          <h5 class="card-title color-primary my-2 bold">
+            {{certificate.name}}
+          </h5>
+           
+          <div class="row my-2" style="text-align: left;">
+            <div class="col">
+              Hoted By:
+              <span class="color-success" style="font-size: 14px;"
+                >{{certificate.by}}</span
+              >
+            </div>
+          </div>
+
+          <div class="row my-2" style="text-align: left;">
+            <div class="col bold">{{certificate.type}}</div>
+          </div>
+          
+        </div>
+        {%endif%}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+{%endif%}
+
 </div>
 {% endblock %} {% block scripts %}{% endblock %}

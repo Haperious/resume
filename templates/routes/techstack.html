@@ -2,9 +2,44 @@
 <div class="container">
 <div class="row">
     <div class="col">
-      Tech Stack
+      Technology Stack
         
     </div>
 </div>
+{% if techstack%}
+<div class="grid-container">
+  {% for stack in techstack%}
+  <div class="row">
+    <div class="col w-100">
+      <div class="card-grid mb-4 shadow-sm">
+
+        <div class="row my-2" style="text-align: left;">
+          {% if stack.proficiency == "proficient"%}
+          <div class="col bold color-success">{{stack.proficiency}}</div>
+          {%else%}
+          <div class="col bold color-primary">{{stack.proficiency}}</div>
+          {%endif%}
+        </div>
+      
+          <img src="{{stack.link}}"  width="100%" heigh="auto"></img> 
+       
+        <div class="card-body">
+          <span class="card-title color-primary my-2 bold" style="font-size: 20px">
+            {{stack.tech_name}}
+          </span>
+           
+         
+
+         
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+{%endif%}
+
 </div>
 {% endblock %} {% block scripts %}{% endblock %}

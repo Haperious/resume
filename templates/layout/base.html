@@ -24,16 +24,7 @@
     />
 
     <!-- Custom CSS -->
-    <link
-      href="{{ url_for('static', filename='css/offers.css') }}"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/card.css') }}"
-    />
-
+   
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/custom.css') }}"
@@ -72,9 +63,9 @@
         <ul id="nav-links" class="nav-links">
             <li> <a  href="{{ url_for('resume.get_resume') }}">Home</a></li>
             <!-- <li> <a  href="{{ url_for('resume.get_academic') }}">Academic Achievement</a></li> -->
-            <li> <a  href="{{ url_for('resume.get_certifications') }}">Certificates</a></li>
+            <li> <a  href="{{ url_for('resume.get_certifications') }}">Certificates & Seminars</a></li>
             <li><a href="{{ url_for('resume.get_projects') }}">Projects</a></li>
-            <li> <a href="{{ url_for('resume.get_techstack') }}">Tech Stack</a></li>
+            <li> <a href="{{ url_for('resume.get_techstack') }}">Technology Stack</a></li>
         </ul>
       </nav>
       
@@ -90,8 +81,6 @@
 
     <!-- Optional: jQuery (if needed) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <script src="{{ url_for('static', filename='js/formatDates.js') }}"></script>
 
     <script>
         function toggleMenu() {

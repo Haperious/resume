@@ -17,7 +17,7 @@ from datetime import datetime
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config.from_object(Config)
 
-# init_db(app, Config)
+init_db(app, Config)
 
 app.register_blueprint(resume_bp, url_prefix="/resume")
 

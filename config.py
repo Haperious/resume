@@ -9,11 +9,11 @@ load_dotenv()
 class Config:
     """Flask application configuration."""
 
-    SECRET_KEY = os.getenv("SECRET_KEY")
+    # SECRET_KEY = os.getenv("SECRET_KEY")
 
     # MongoDB URIs for different databases
-    MONGO_URIS = {
-        "main": os.getenv("MONGO_AI"),
+    MONGO_DB = {
+        "main": os.getenv("MONGO_DB"),
         
     }
 

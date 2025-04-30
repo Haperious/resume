@@ -54,16 +54,13 @@ class DatabaseManager:
 # Initialize MongoDB connection when the app starts
 def init_db(app, config):
     """Ensure MongoDB connections persist throughout the app lifecycle."""
-    db_manager = DatabaseManager(config.MONGO_URIS)
+    db_manager = DatabaseManager(config.MONGO_DB)
 
     # Assign MongoDB collections
     app.db = {
-        "amadeus-helpdesk-ai": db_manager.get_database("main", "amadeus-helpdesk-ai"),
+        "my_resume": db_manager.get_database("main", "my_resume"),
     }
 
-    app.ms_customers = {
-        "morningstars": db_manager.get_database("secondary", "morningstars")
-    }
 
     # # Configure Flask-Session
     # app.config["SESSION_MONGODB"] = db_manager.clients["main"]

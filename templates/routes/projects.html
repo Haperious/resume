@@ -6,5 +6,59 @@
         
     </div>
 </div>
+{% if projects%}
+<div class="grid-container">
+  {% for project in projects%}
+  <div class="row">
+    <div class="col w-100">
+      <div class="card-grid mb-4 shadow-sm">
+
+        <div class="card-body">
+          <span style="font-size: 20px;" class="card-title color-primary my-2 bold">
+            {{project.project_name}}
+          </span>
+           
+          <div class="row my-2" style="text-align: left;">
+            <div class="col">
+              {% for stack in project.tech_stack%}
+              {% if stack == "React JS"%}
+              <span class="badge bg-primary" style="font-size: 14px;" >{{stack}}</span>
+              {% elif stack == "Next JS"%}
+              <span class="badge bg-warning" style="font-size: 14px;" >{{stack}}</span>
+              {% elif stack == "MongoDB"%}
+              <span class="badge bg-success" style="font-size: 14px;" >{{stack}}</span>
+              {% elif stack == "Power BI"%}
+              <span class="badge bg-warning" style="font-size: 14px;" >{{stack}}</span>
+              {% elif stack == "AWS"%}
+              <span class="badge bg-info" style="font-size: 14px;" >{{stack}}</span>
+              {% elif stack == "C#"%}
+              <span class="badge bg-danger" style="font-size: 14px;" >{{stack}}</span>
+              {% elif stack == "MySQL"%}
+              <span class="badge bg-light-sky" style="font-size: 14px;" >{{stack}}</span>
+              {% elif stack == "Python"%}
+              <span class="badge bg-warning" style="font-size: 14px;" >{{stack}}</span>
+              {% elif stack == "Flask"%}
+              <span class="badge bg-primary" style="font-size: 14px;" >{{stack}}</span>
+              {%endif%}
+             
+
+              {%endfor%}
+             
+             
+            </div>
+          </div>
+
+          <div class="row my-2" style="text-align: left;">
+            <div class="col">{{project.description}}</div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+{%endif%}
 </div>
 {% endblock %} {% block scripts %}{% endblock %}
