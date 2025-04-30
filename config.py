@@ -13,7 +13,7 @@ class Config:
 
     # MongoDB URIs for different databases
     MONGO_DB = {
-        "main": os.getenv("MONGO_DB"),
+        "main": os.environ.get("MONGO_DB"),
         
     }
 
