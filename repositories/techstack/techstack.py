@@ -15,7 +15,7 @@ class TechStackRepo:
        
         try:
             tech_stack = list(
-                self.collection.find({}, {"_id": 0}).sort("id", 1)
+                self.collection.find({}, {"_id": 0}).sort("proficiency", -1)
             )
 
             if tech_stack:
